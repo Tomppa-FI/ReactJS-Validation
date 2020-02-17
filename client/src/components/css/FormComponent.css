@@ -1,5 +1,5 @@
 .Form-container {
-  margin: 3% 30%;
+  margin: 3% 10%;
   padding: 2%;
   background-color: white;
   text-align: left;
@@ -17,4 +17,11 @@
     bottom: 10px;
     right: 10px;
     margin-top: 0;
+}
+
+@media (min-width: 1025px) {
+  .Form-container {
+    margin: 3% 30%;
+  }
+  
 }
