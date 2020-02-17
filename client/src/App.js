@@ -5,6 +5,11 @@ import {
   Route
 } from "react-router-dom";
 import Navbar from "./components/Navbar";
+import FormComponent from './components/FormComponent';
+import "./App.css"
+import Footer from './components/Footer';
+
+let users = [];
 
 function App() {
   return (
@@ -12,13 +17,19 @@ function App() {
       <Router>
         <Navbar />
         <Switch>
-          <Route path="/">
-            <div>Home</div>
+          <Route path="/form">
+            <FormComponent addUserData={addUserData}/>
           </Route>
         </Switch>
       </Router>
+      <Footer />
     </div>
   );
+}
+
+const addUserData = userData => {
+  users.push(Object.assign({}, userData));
+  console.log(users);
 }
 
 export default App;
