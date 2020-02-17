@@ -17,8 +17,8 @@ export default (props) => {
     )
   }
   return (
-    <div className="Table-container">
-      <tabel class="table">
+    <div className="Table-container table-responsive">
+      <table class="table table-striped">
         <thead>
           <tr>
             <th scope="col">#</th>
@@ -31,7 +31,7 @@ export default (props) => {
         <tbody>
           {rows}
         </tbody>
-      </tabel>
+      </table>
     </div>
   )
 }
