@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import FormComponent from './components/FormComponent';
 import "./App.css"
 import Footer from './components/Footer';
+import MockDatabase from './components/MockDatabase';
 
 let users = [];
 
@@ -20,6 +21,9 @@ function App() {
           <Route path="/form">
             <FormComponent addUserData={addUserData}/>
           </Route>
+          <Route path="/data">
+            <MockDatabase users={users} />
+          </Route>
         </Switch>
       </Router>
       <Footer />
@@ -29,7 +33,6 @@ function App() {
 
 const addUserData = userData => {
   users.push(Object.assign({}, userData));
-  console.log(users);
 }
 
 export default App;
